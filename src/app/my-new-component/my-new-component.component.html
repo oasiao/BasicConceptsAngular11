@@ -1,0 +1,23 @@
+<h1>This is the component that we've generated!</h1>
+
+<button (click)="addAge()">+</button>
+<button (click)="removeAge()">-</button>
+
+<h3 [style.background]="age >=18 ? 'green' : 'red'"
+  [style.color]="'white'">Your age is: {{age}}</h3>
+
+<div *ngIf="age>=18">
+  You are of legal age
+</div>
+<div *ngIf="age<18">
+  Not in legal age.
+</div>
+
+<hr>
+
+<h3>List of names</h3>
+<ul>
+  <li *ngFor="let name of names; let i = index">
+    {{i +'. '+name}}
+  </li>
+</ul>>
