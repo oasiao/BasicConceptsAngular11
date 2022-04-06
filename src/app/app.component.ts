@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BasicConceptsAngular11';
-  name:String = 'Kim Asiao';
+  name:string = 'Kim Asiao';
+  myName:string = 'Onika Kim Asiao Dumbrique';
+
+  onSayHello(message:string){
+    console.log(message);
+  }
 }
 

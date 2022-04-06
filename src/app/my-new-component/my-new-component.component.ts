@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'new-component',
-  templateUrl: './my-new-component.component.html',
+  //template: `<p>Hello world!</p>`
+  templateUrl: './my-new-component.component.html', //o template o templateURL
+  //styles: [`h3{ font-size: 1.6em;}`]
   styleUrls: ['./my-new-component.component.css']
 })
 export class MyNewComponentComponent implements OnInit {
