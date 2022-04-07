@@ -9,6 +9,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 
 import { UpperCapitalPipe } from './home-component/upper-capital.pipe';
 import { LoggerService } from './logger.service';
+import { GreetingsService } from './greetings.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { LoggerService } from './logger.service';
     CommonModule,
     FormsModule
   ],
-  providers: [LoggerService],
+  providers: [LoggerService,GreetingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

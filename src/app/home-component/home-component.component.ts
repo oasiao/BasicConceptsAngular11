@@ -1,9 +1,11 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { GreetingsService } from '../greetings.service';
 
 @Component({
   selector: 'home',
   templateUrl: './home-component.component.html',
-  styleUrls: ['./home-component.component.css']
+  styleUrls: ['./home-component.component.css'],
+  providers: [GreetingsService]
 })
 export class HomeComponentComponent{
   @Input() surname:string;
@@ -17,10 +19,11 @@ export class HomeComponentComponent{
   public namesList: Array<string> = [];
   // public inputName: string = 'John';
   public inputName: string = '';
-  constructor(){}
+  constructor(private greetings: GreetingsService){}
 
   //creamos el método:::
   onNameClick(){
+    console.log("Counter in HelloComponent is: ", this.greetings.counter);
     this.sayHello.emit('Hello!');
   }
 
