@@ -14,7 +14,7 @@
 <!--<p (click)="onNameClick()" *ngIf="surname">Welcome {{surname}}!</p>-->
 
 <p *ngFor="let item of namesList; index as i" (click)="onNameClick()">
-  {{i}}. Welcome {{item}}!
+  {{i}}. Welcome {{ item | upperCapital }} !
 </p>
 
 <!--

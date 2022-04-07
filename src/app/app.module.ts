@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 
+import { UpperCapitalPipe } from './home-component/upper-capital.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     MyNewComponentComponent,
     HomeComponentComponent,
+    UpperCapitalPipe
   ],
   imports: [
     BrowserModule,
