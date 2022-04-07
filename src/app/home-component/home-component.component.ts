@@ -15,7 +15,8 @@ export class HomeComponentComponent{
   @Output() sayHello: EventEmitter<string> = new EventEmitter<string>();
 
   public namesList: Array<string> = [];
-  public inputName: string = 'John';
+  // public inputName: string = 'John';
+  public inputName: string = '';
   constructor(){}
 
   //creamos el método:::
@@ -29,8 +30,11 @@ export class HomeComponentComponent{
     console.log(this.namesList);
   }
 
-  updateInputName(event:any){
+  //used only for trial binding bidirectional. Use NgModel to simplify the code
+  /*updateInputName(event:any){
     this.inputName = event.target.value;
     console.log(this.inputName);
-  }
+  }*/
+
+
 }

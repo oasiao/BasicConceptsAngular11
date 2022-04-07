@@ -2,8 +2,7 @@
 <h2>Name: {{name}}</h2>
 
 <div style="border: 3px solid red;">
-
-  <home [surname]="myName" (sayHello)="onSayHello($event)"></home>
-  <home [surname]="myName" (sayHello)="onSayHello($event)"></home>
+  <div [class.hidden]="myHelloComponent.inputName.length == 0">Writting '{{myHelloComponent.inputName}} in HomeComponent'</div>
+  <home #myHelloComponent [surname]="myName" (sayHello)="onSayHello($event)"></home>
   <new-component></new-component>
 </div>
