@@ -6,7 +6,7 @@
 
 <div style="border: 3px solid red;">
   <div [class.hidden]="myHelloComponent.inputName.length == 0">
-    Writting '{{myHelloComponent.inputName}} in HomeComponent'
+    <span [ngClass]="updateNameClasses(myHelloComponent.inputName)">Writting '{{myHelloComponent.inputName}} </span> in HomeComponent'
   </div>
   <!--<home #myHelloComponent [surname]="myName" (sayHello)="onSayHello($event)"></home>-->
   <home #myHelloComponent (sayHello)="onSayHello($event)"></home>
