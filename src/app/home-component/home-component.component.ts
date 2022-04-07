@@ -14,6 +14,8 @@ export class HomeComponentComponent{
   // Hay que instanciarlo
   @Output() sayHello: EventEmitter<string> = new EventEmitter<string>();
 
+  public namesList: Array<string> = [];
+  public inputName: string = 'John';
   constructor(){}
 
   //creamos el método:::
@@ -21,4 +23,14 @@ export class HomeComponentComponent{
     this.sayHello.emit('Hello!');
   }
 
+  addName(){
+    this.namesList.push(this.inputName);
+    this.inputName = '';
+    console.log(this.namesList);
+  }
+
+  updateInputName(event:any){
+    this.inputName = event.target.value;
+    console.log(this.inputName);
+  }
 }
